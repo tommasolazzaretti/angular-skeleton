@@ -1,0 +1,14 @@
+{
+  "/api/*": {
+    "target": {
+      "host": "host",
+      "protocol": "https:"
+    },
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "info",
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

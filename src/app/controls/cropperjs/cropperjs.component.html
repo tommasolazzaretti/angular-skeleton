@@ -1,0 +1,20 @@
+<div *ngIf="imageUrl" class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <angular-cropper #angularCropper [cropperOptions]="config" [imageUrl]="imageUrl" (export)="resultImageFun($event)"></angular-cropper>
+      <button (click)="CropMe()">CropMe</button>
+      <button (click)="reset()">Reset</button>
+    </div>
+    <div class="col-6" *ngIf="resultResult">
+      <img [src]="resultResult" />
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12" id="banner-message">
+      <input type="file"  id="myfile">
+    </div>
+  </div>
+</div>

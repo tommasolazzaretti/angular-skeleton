@@ -1,0 +1,12 @@
+<div [ngStyle]="{'width': width+'px', 'height' : height+'px'}">
+  <!-- with lazy loading image  -->
+  <div *ngIf="lazyLoadImage" class="imgContainerClass" lazy-load-images [class.ghost]="loading">
+    <img *ngIf="loading" src="{{spinnerSrc}}" class="img-ghost" alt="" />
+    <img (load)="onLoad()" [attr.data-src]="imgSrc" alt="" />
+  </div>
+  <!-- widthout lazy loading image -->
+  <div *ngIf="!lazyLoadImage" class="imgContainerClass" [class.ghost]="loading">
+    <img *ngIf="loading" src="{{spinnerSrc}}" class="img-ghost" alt="" />
+    <img (load)="onLoad()" [src]="imgSrc" alt="" />
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div style="padding-top: 10%; text-align: center">
+
+  <img src="../assets/images/thelab.jpeg" (click)="showModal()" alt="immagine copertina">
+
+  <app-aside-modal #asideModal [settings]='settings'>
+    <div header>This should be rendered in header selection of ng-content</div>
+    <div body>This should be rendered in body selection of ng-content</div>
+    <div footer>
+      <button (click)="closeModal()">
+        Close
+      </button>
+    </div>
+  </app-aside-modal>
+
+  <cropperjs></cropperjs>
+</div>

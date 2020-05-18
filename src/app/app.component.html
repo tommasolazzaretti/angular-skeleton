@@ -1,0 +1,13 @@
+<!--header-->
+<nav>
+  <a routerLink="home">home</a>
+  <a routerLink="test">test</a>
+</nav>
+
+<div id="body-site" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+  <router-outlet #o="outlet"></router-outlet>
+</div>
+
+<!--footer-->
+
+<loading *ngIf="isShowLoader" class="col-12" [show]="isShowLoader" [message]="loaderMessage"></loading>

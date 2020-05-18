@@ -1,0 +1,7 @@
+<gridster [options]="options" *ngIf="loaded">
+  <gridster-item [item]="item" *ngFor="let item of dashboard">
+    <div>
+      <button>remove</button>
+    </div>
+  </gridster-item>
+</gridster>

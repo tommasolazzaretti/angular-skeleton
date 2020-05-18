@@ -1,0 +1,73 @@
+<!-- <H1>
+        EXAMPLE ANGULAR GRIDSTER
+</H1>
+
+<angular-gridster></angular-gridster>
+
+<H1>
+        EXAMPLE IMAGE-SPINNER
+</H1>
+
+<div class="container">
+        <spinner-img [imgSrc]="imgUrl" [spinnerSrc]="'../assets/images/ball-triangle.svg'"
+                [imgContainerClass]="imgContainerClass"></spinner-img>
+</div>
+
+<H1>
+        EXAMPLE placeholder-loading PLUGIN
+</H1>
+
+<div class="ph-item">
+        <div class="ph-col-12">
+                <div class="ph-picture">
+                </div>
+                <div class="ph-row">
+                        <div class="ph-col-6 big"></div>
+                        <div class="ph-col-4 empty big"></div>
+                        <div class="ph-col-2 big"></div>
+                        <div class="ph-col-4"></div>
+                        <div class="ph-col-8 empty"></div>
+                        <div class="ph-col-6"></div>
+                        <div class="ph-col-6 empty"></div>
+                        <div class="ph-col-12"></div>
+                </div>
+        </div>
+</div>
+-->
+<H1>
+  EXAMPLE USER-LIST WITH GHOST
+</H1>
+
+
+<app-user-list></app-user-list>
+
+<h1>
+  LAZY LOADING IMAGES
+</h1>
+
+<div>
+  IMAGE TAG
+</div>
+<!-- Image tags -->
+<!-- <div class="image-list">
+        <img style="width:150px;height:150px"*ngFor="let imageUrl of arrayImages" [src]="imageUrl.url">
+</div> -->
+
+<!-- lazy-load-images -->
+
+<div class="image-list" *ngFor="let imageUrl of arrayImages">
+  <app-spinner-img [lazyLoadImage]="true" [imgSrc]="imageUrl.large_url" [width]="500" [height]="200"
+                   [spinnerSrc]="'../assets/svg/three-dots.svg'"
+                   [imgContainerClass]="imgContainerClass"></app-spinner-img>
+  <!-- <img style="width:150px;height:150px"*ngFor="let imageUrl of arrayImages" [attr.data-src]="imageUrl.url"> -->
+</div>
+
+
+<button (click)="addImages()">add images</button>
+
+<!-- Background images -->
+
+<!-- BACKGROUND-IMAGES
+<div class="image-list" lazy-load-images>
+        <div *ngFor="let imageUrl of arrayImages" [attr.data-background-src]="imageUrl.url"></div>
+</div> -->

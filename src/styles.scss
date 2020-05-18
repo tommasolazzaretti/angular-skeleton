@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~src/assets/base";
+
+@import "../node_modules/placeholder-loading/src/scss/placeholder-loading";
+
+// set font site
+@font-face {
+  font-family: "Raleway-Regular";
+  //src: url("./assets/font/Raleway-Regular.ttf")
+}
+
+@font-face {
+  font-family: "Raleway-Bold";
+  //src: url("./assets/font/Raleway-Bold.ttf")
+}
+
+@font-face {
+  font-family: "Raleway-SemiBold";
+  //src: url("./assets/font/Sanchez-Regular.ttf")
+}
+
+// classi font sito
+.font-text {
+  font-size: $size-base;
+  font-family: $regular;
+  color: $text-color;
+}
+
+.font-title {
+  font-size: $size-title;
+  font-family: $regular-bold;
+  color: $text-color;
+}
+
+// CLASSI UTILI
+.pointer {
+  cursor: pointer;
+}
+
+.align-middle {
+  display: flex;
+  align-items: center;
+}
+
+.justify-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pre-wrap {
+  white-space: pre-wrap;
+}
+
+// material import
+html, body {
+
+  height: 100%;
+
+  font-size: calc((100vW - 99vW)) !important;
+  //font-size: 16px !important;
+
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.fluid-type {
+  font-size: 3rem;
+  color: red;
+}
+
+.test {
+  font-size: 1rem;
+  color: blue;
+}
+

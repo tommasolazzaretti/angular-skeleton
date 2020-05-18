@@ -1,0 +1,9 @@
+<ng-template [ngIf]="show">
+  <div class="loader row">
+    <div class="col-12" *ngIf="!message">
+      <lottie-animation-view [options]="lottieConfig" [width]="150" [height]="150"
+        (animCreated)="handleAnimation($event)">
+      </lottie-animation-view>
+    </div>
+  </div>
+</ng-template>
